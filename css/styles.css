@@ -5,7 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
 }
+
 
 .gallery {
     list-style: none;
@@ -36,44 +39,17 @@ body {
     cursor: url('../assets/cursors/custom-cursor.svg') 10 10, pointer;
 }
 
-.modal {
-    background: rgba(46, 47, 66, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    box-sizing: border-box;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.modal.show {
-    opacity: 1;
-}
-
-.modal .modal-content {
-    position: relative;
-    max-width: 1112px;
-    width: 100%;
-    height: auto;
-}
 
 .modal img {
     max-width: 100%;
-    max-height: 90vh;
     object-fit: cover;
     display: block;
 }
 
 .modal-text {
+    display: block;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
@@ -82,7 +58,7 @@ body {
     font-size: 18px;
     text-align: left;
     opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
     box-sizing: border-box;
 }
 

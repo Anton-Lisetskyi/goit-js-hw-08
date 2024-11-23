@@ -106,14 +106,9 @@ galleryContainer.addEventListener('click', event => {
     instance.show();
     
     const modal = document.querySelector('.modal');
-    const modalContent = modal.querySelector('.modal-content');
     const modalText = modal.querySelector('.modal-text');
 
-   setTimeout(() => {
-      modal.classList.add('show');
-    }, 50)
-
-    modalText.style.width = modalContent.clientWidth + 'px';
+ 
 
     setTimeout(() => {
       modalText.classList.add('show-text');
@@ -127,14 +122,6 @@ galleryContainer.addEventListener('click', event => {
       if (event.target !== event.currentTarget) {
         return;
       }
-
-      modalText.classList.remove('show-text');
-      modal.classList.remove('show');
-
-      setTimeout(() => {
-        instance.close();
-        document.body.style.overflow = 'auto';
-      }, 500);
   
     });
   }
